@@ -1,29 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Annamalai | Software Engineer</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<nav>
-  <button onclick="loadSection('about')">About</button>
-  <button onclick="loadSection('system')">System Design</button>
-  <button onclick="loadSection('projects')">Projects</button>
-  <button onclick="loadSection('learning')">Learning</button>
-</nav>
+  <!-- HERO SECTION -->
+  <header>
+    <h1>Annamalai</h1>
+    <p>
+      Backend Engineer focused on <b>System Design</b>,  
+      <b>Scalable Architecture</b>, and <b>Clean Engineering</b>.
+    </p>
+  </header>
 
-<main id="content">
- <div class="card">
-  <h3>Welcome</h3>
-  <p>
-   System design, architecture & backend engineering
-  </p>
-</div>
-</main>
-</div>
+  <!-- CARD NAVIGATION -->
+  <section class="nav-cards">
+    <div class="card nav-card" onclick="loadSection('about')">
+      <h3>About</h3>
+      <p>Who I am & what I build</p>
+    </div>
 
+    <div class="card nav-card" onclick="loadSection('system')">
+      <h3>System Design</h3>
+      <p>How large systems really work</p>
+    </div>
 
-<script src="app.js"></script>
+    <div class="card nav-card" onclick="loadSection('projects')">
+      <h3>Projects</h3>
+      <p>Hands-on engineering work</p>
+    </div>
+
+    <div class="card nav-card" onclick="loadSection('learning')">
+      <h3>Learning</h3>
+      <p>DSA, AWS, Design Patterns</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main id="content">
+    <div class="card">
+      <h2>Welcome</h2>
+      <p>
+        This space documents how modern systems are designed —  
+        from databases and caching to scaling and failure handling.
+      </p>
+      <p>
+        No fluff. Only engineering fundamentals explained clearly.
+      </p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Annamalai · Built with clarity, not complexity</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function loadSection(section) {
+      const content = document.getElementById("content");
+
+      if (section === "about") {
+        content.innerHTML = `
+          <div class="card">
+            <h2>About Me</h2>
+            <p>
+              Software Engineer with 5+ years of experience in
+              .NET, REST APIs, SQL, and backend systems.
+            </p>
+            <p>
+              Currently focused on mastering system design,
+              architecture trade-offs, and scalability.
+            </p>
+          </div>
+        `;
+      }
+
+      if (section === "system") {
+        content.innerHTML = `
+          <div class="card">
+            <h2>System Design</h2>
+            <ul>
+              <li>URL Shortener – Key generation & redirection flow</li>
+              <li>Database vs Cache – Why both matter</li>
+              <li>Scaling reads with Redis</li>
+              <li>Failure handling & trade-offs</li>
+            </ul>
+            <p>
+              Each system is broken down into problem statement,
+              architecture, data flow, and risks.
+            </p>
+          </div>
+        `;
+      }
+
+      if (section === "projects") {
+        content.innerHTML = `
+          <div class="card">
+            <h2>Projects</h2>
+            <p>
+              Real-world backend focused projects with emphasis on
+              clean code and performance.
+            </p>
+            <p>
+              GitHub repositories will be linked here.
+            </p>
+          </div>
+        `;
+      }
+
+      if (section === "learning") {
+        content.innerHTML = `
+          <div class="card">
+            <h2>Learning & Growth</h2>
+            <ul>
+              <li>System Design fundamentals</li>
+              <li>Design Patterns</li>
+              <li>DSA for problem solving</li>
+              <li>AWS & cloud architecture</li>
+            </ul>
+            <p>
+              Learning in public, applying immediately.
+            </p>
+          </div>
+        `;
+      }
+    }
+  </script>
+
 </body>
 </html>
