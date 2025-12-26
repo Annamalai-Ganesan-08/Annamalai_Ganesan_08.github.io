@@ -1,0 +1,125 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Color Palette ===== */
+:root {
+  --gold: #c9a24d;
+  --gold-light: #e6c87a;
+  --black: #0f0f0f;
+  --white: #ffffff;
+  --gray: #b5b5b5;
+}
+
+/* ===== Body ===== */
+body {
+  font-family: 'Segoe UI', 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: var(--white);
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* ===== Navigation ===== */
+nav {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgba(201,162,77,0.3);
+  padding-bottom: 20px;
+}
+
+nav button {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid rgba(201,162,77,0.5);
+  padding: 10px 18px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav button:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* ===== Main Content ===== */
+main {
+  min-height: 400px;
+}
+
+/* ===== Headings ===== */
+h1, h2, h3 {
+  color: var(--gold);
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+/* ===== Paragraphs ===== */
+p {
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+
+/* ===== Lists ===== */
+ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  color: var(--white);
+}
+
+/* ===== Cards (System Design blocks) ===== */
+.card {
+  border: 1px solid rgba(201,162,77,0.3);
+  padding: 24px;
+  margin-bottom: 30px;
+  background: rgba(255,255,255,0.02);
+}
+
+.card:hover {
+  border-color: var(--gold);
+}
+
+/* ===== Links ===== */
+a {
+  color: var(--gold-light);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 80px;
+  text-align: center;
+  color: var(--gray);
+  font-size: 13px;
+  border-top: 1px solid rgba(201,162,77,0.3);
+  padding-top: 20px;
+}
